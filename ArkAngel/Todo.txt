@@ -1,0 +1,11 @@
+TO DO LIST:
+	1. Make Minimap
+	2. Make Better Move tp Map Point
+	3. Improve Mining Bot
+	4. Make Nether Bot
+
+
+
+
+
+

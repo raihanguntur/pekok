@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{446ab3b8-c2d3-4c8f-b9fe-da1a99344bf8}</ProjectGuid>
+    <RootNamespace>ArkAngel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\chair\source\repos\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\chair\source\repos\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExternalIncludePath>C:\Program Files\Mono\include\mono-2.0;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\Users\chair\source\repos\ArkAngel\x64\Debug\mono\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExternalIncludePath>C:\Program Files\Mono\include\mono-2.0;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\Users\chair\source\repos\ArkAngel\x64\Debug\mono\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ARKANGEL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <UndefinePreprocessorDefinitions>_DEBUG=1</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ARKANGEL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <UndefinePreprocessorDefinitions>_DEBUG=0</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>AADEBUG;_DEBUG;ARKANGEL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <UndefinePreprocessorDefinitions>_DEBUG=1</UndefinePreprocessorDefinitions>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libmono-static-sgen.lib;winmm.lib;ws2_32.lib;version.lib;bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>C:\Users\chair\source\repos\ArkAngel\tools\BuildIncrement.exe</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>AARELEASE;NDEBUG;ARKANGEL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <UndefinePreprocessorDefinitions>_DEBUG=0</UndefinePreprocessorDefinitions>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>libmono-static-sgen.lib;winmm.lib;ws2_32.lib;version.lib;bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>C:\Users\chair\source\repos\ArkAngel\tools\BuildIncrement.exe</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Discord\connection_win.cpp" />
+    <ClCompile Include="Discord\discord_register_win.cpp" />
+    <ClCompile Include="Discord\discord_rpc.cpp" />
+    <ClCompile Include="Discord\rpc_connection.cpp" />
+    <ClCompile Include="Discord\serialization.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="il2cpp-init.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_stdlib.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="imgui\implot.cpp" />
+    <ClCompile Include="imgui\implot_items.cpp" />
+    <ClCompile Include="imgui\TextEditor.cpp" />
+    <ClCompile Include="kiero\kiero.cpp" />
+    <ClCompile Include="kiero\minhook\src\buffer.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="kiero\minhook\src\hook.c" />
+    <ClCompile Include="kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Il2CppSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app-il2cpp-types.h" />
+    <ClInclude Include="BSON.h" />
+    <ClInclude Include="ChairMono.h" />
+    <ClInclude Include="ChatHandler.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="date.h" />
+    <ClInclude Include="DiscordRpcPW.h" />
+    <ClInclude Include="Discord\backoff.h" />
+    <ClInclude Include="Discord\connection.h" />
+    <ClInclude Include="Discord\discord_register.h" />
+    <ClInclude Include="Discord\discord_rpc.h" />
+    <ClInclude Include="Discord\msg_queue.h" />
+    <ClInclude Include="Discord\rapidjson\allocators.h" />
+    <ClInclude Include="Discord\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="Discord\rapidjson\document.h" />
+    <ClInclude Include="Discord\rapidjson\encodedstream.h" />
+    <ClInclude Include="Discord\rapidjson\encodings.h" />
+    <ClInclude Include="Discord\rapidjson\error\en.h" />
+    <ClInclude Include="Discord\rapidjson\error\error.h" />
+    <ClInclude Include="Discord\rapidjson\filereadstream.h" />
+    <ClInclude Include="Discord\rapidjson\filewritestream.h" />
+    <ClInclude Include="Discord\rapidjson\fwd.h" />
+    <ClInclude Include="Discord\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="Discord\rapidjson\internal\clzll.h" />
+    <ClInclude Include="Discord\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="Discord\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="Discord\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="Discord\rapidjson\internal\itoa.h" />
+    <ClInclude Include="Discord\rapidjson\internal\meta.h" />
+    <ClInclude Include="Discord\rapidjson\internal\pow10.h" />
+    <ClInclude Include="Discord\rapidjson\internal\regex.h" />
+    <ClInclude Include="Discord\rapidjson\internal\stack.h" />
+    <ClInclude Include="Discord\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="Discord\rapidjson\internal\strtod.h" />
+    <ClInclude Include="Discord\rapidjson\internal\swap.h" />
+    <ClInclude Include="Discord\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="Discord\rapidjson\memorybuffer.h" />
+    <ClInclude Include="Discord\rapidjson\memorystream.h" />
+    <ClInclude Include="Discord\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="Discord\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="Discord\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="Discord\rapidjson\pointer.h" />
+    <ClInclude Include="Discord\rapidjson\prettywriter.h" />
+    <ClInclude Include="Discord\rapidjson\rapidjson.h" />
+    <ClInclude Include="Discord\rapidjson\reader.h" />
+    <ClInclude Include="Discord\rapidjson\schema.h" />
+    <ClInclude Include="Discord\rapidjson\stream.h" />
+    <ClInclude Include="Discord\rapidjson\stringbuffer.h" />
+    <ClInclude Include="Discord\rapidjson\uri.h" />
+    <ClInclude Include="Discord\rapidjson\writer.h" />
+    <ClInclude Include="Discord\rpc_connection.h" />
+    <ClInclude Include="Discord\serialization.h" />
+    <ClInclude Include="DrawlistHelper.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="il2cpp-generic-list.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="il2cpp-appdata.h" />
+    <ClInclude Include="il2cpp-functions.h" />
+    <ClInclude Include="il2cpp-helper.h" />
+    <ClInclude Include="il2cpp-init.h" />
+    <ClInclude Include="il2cpp-typedefs.h" />
+    <ClInclude Include="Il2CppBson.h" />
+    <ClInclude Include="Il2CppHooks.h" />
+    <ClInclude Include="Il2CppSystem.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imgui_memory_editor.h" />
+    <ClInclude Include="imgui\imgui_stdlib.h" />
+    <ClInclude Include="imgui\implot.h" />
+    <ClInclude Include="imgui\implot_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="imgui\TextEditor.h" />
+    <ClInclude Include="kiero\kiero.h" />
+    <ClInclude Include="kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="kiero\minhook\src\buffer.h" />
+    <ClInclude Include="kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="PathFinding.h" />
+    <ClInclude Include="PerlinNoise.hpp" />
+    <ClInclude Include="ReflectionHelper.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Save.h" />
+    <ClInclude Include="Timing.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="Valid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kiero\minhook\dll_resources\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Discord\CMakeLists.txt" />
+    <Text Include="hi-goos.txt" />
+    <Text Include="Todo.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_StartDate="2000/1/1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
